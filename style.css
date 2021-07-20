@@ -1,0 +1,260 @@
+/* ボディ要素 */
+body{
+  margin: 0;
+}
+/* ヘッダーナビゲーション要素(固定ヘッダー) */
+.header-nav-wrapper{
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+/* ヘッダー要素 */
+header{
+}
+.header-container{
+  display: flex;
+  margin: 20px 40px;
+}
+.header-container a{
+  text-decoration: none;
+  color: #4C4C4C;
+}
+.logo{
+  margin: 0;
+}
+.search{
+  margin-top: auto;
+  margin-left: auto;
+}
+.search input[type="text"]{
+  padding: 10px 10px 10px 40px;
+  width: 300px;
+  height: 20px;
+  border: 3px solid #4C4C4C;
+  border-radius: 30px 0 0 30px;
+  background: url(search.png) 10px center no-repeat;
+  background-size: 18px;
+}
+.search input[type="submit"]{
+  padding: 0 20px;
+  height: 46px;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  background: #4C4C4C;
+  color: white;
+}
+/* ナビゲーション要素 */
+nav{
+  background: #4C4C4C;
+}
+.nav-container ul{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 10px 0 10px;
+}
+.nav-container li a{
+  display: block;
+  width: 100%;
+  padding: 10px 20px; /*nav内の親クラスにサイズ指定をしないように*/
+  text-decoration: none;
+  color: white;
+}
+/* メインフッター要素 */
+.main-wrapper{
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 150px;
+  width: 100%;
+}
+/* メイン要素 */
+main{
+  background: gray;
+}
+.main-container{
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  height: 2000px;
+}
+.column1{
+  flex: 0 0 22.5%;
+  margin: 0 0 0 40px;
+  padding: 30px 0px;
+  /* サイドバー固定用 */
+  /* position: fixed;
+  height: 100%; */
+}
+.column1 ul{
+  list-style-type: none;
+  padding: 0;
+}
+.column1 li a{
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #4C4C4C;
+  padding: 10px 0;
+}
+.column2{
+  flex: 1 1 auto;
+  margin: 0 20px 0 0;
+  padding: 30px;
+}
+.column2 h2{
+  padding-left: 10px;
+  border-left: 8px solid yellow;
+}
+.column2 h3{
+  padding: 10px;
+  border-left: 3px solid yellow;
+}
+.news-contents{
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+.news-contents li{
+  flex: 0 0 19%;
+  border: 1px solid #4C4C4C;
+}
+.column3{
+  flex: 0 0 25%;
+  margin: 0 20px 0 0;
+  padding: 30px 0;
+}
+/* フッター要素 */
+footer{
+
+}
+.footer-container{
+  padding: 20px;
+  background: #4C4C4C;
+  margin-bottom: 94px; /* キャンペーンブロック設置時 */
+}
+.footer-nav{
+  display: flex;
+  justify-content: space-around;
+}
+.footer-nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+}
+.footer-nav li a{
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: white;
+}
+.siteinfo{
+  padding: 20px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.copyright{
+  margin: 0;
+  color: white;
+}
+footer address{
+  color: white;
+}
+/* キャンペーンブロック */
+.campaign{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  background: yellow;
+  box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.6);
+}
+.campaign p{
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+.campaign-btn{
+  display: inline-block;
+  margin: 0 0 0 10px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: #4C4C4C;
+  color: white;
+}
+
+
+/* スマホ表示 */
+@media screen and (max-width: 768px){
+/* ヘッダー要素 */
+.logo{
+  font-size: 28px;
+}
+.search input[type="text"]{
+  width: 100px;
+}
+.header-container{
+  display: flex;
+  margin: 20px 20px;
+}
+/* ナビゲーション要素 */
+.nav-container ul{
+  display: block;
+  padding: 20px 10px 20px 10px;
+}
+/* メインフッター要素 */
+.main-wrapper{
+  top: 348px;
+}
+/* メイン要素 */
+.main-container{
+  display: block;
+  padding: 0 0 40px 0;
+}
+.column1{
+  margin: 0 20px;
+  padding: 30px 0;
+}
+.column2{
+  margin: 0 20px;
+  padding: 30px 0;
+}
+.news-contents li{
+  flex: 0 0 32%;
+  border: 1px solid #4C4C4C;
+}
+.column3{
+  margin: 0 20px;
+  padding: 30px 0;
+}
+/* フッター要素 */
+.footer-nav{
+  display: block;
+}
+/* キャンペーンブロック */
+.campaign{
+  padding: 30px 0;
+}
+}
+
+/* 検索フォーム消去 */
+@media screen and (max-width: 484px){
+/* ヘッダー要素 */
+.search{
+  display: none;
+}
+/* フッター要素 */
+.footer-container{
+  margin-bottom: 118px; /* キャンペーンブロック設置時 */
+}
+}
